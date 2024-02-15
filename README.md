@@ -5,7 +5,7 @@
 **Clang**: [ZyCromerZ/Clang 17.0.0](https://github.com/ZyCromerZ/Clang/releases/tag/17.0.0-20230725-release)
 
 ## KenrelSU
-Please run the following step brfore building.
+Please run the following step before building.
 ```bash
 cd /path/to/kernel/source
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
