@@ -6,7 +6,8 @@
 # This script is used to build android kernel for mi10 #
 # ===----------------------------------------------=== #
 
-KERNEL_VERSION="2.2"
+KERNEL_VERSION="2.3"
+DEFCONFIG="ucmi_nethunter_apatch_defconfig"
 
 # ===------------=== #
 # Clone Dependencies #
@@ -74,7 +75,7 @@ echo "[+] fetch KenrelSU"
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
 
 echo "[+] copy defconfig"
-cp $(pwd)/ucmi_nethunter_defconfig $(pwd)/arch/arm64/configs/ucmi_nethunter_defconfig
+cp $(pwd)/${DEFCONFIG} $(pwd)/arch/arm64/configs/${DEFCONFIG}
 
 # ===-----------------=== #
 # Buiding Kernel & Module #
@@ -142,7 +143,7 @@ echo "[!] cleanning old configuration"
 make mrproper
 
 echo "[!] executing defconfig"
-make ${args} ucmi_nethunter_defconfig
+make ${args} ${DEFCONFIG}
 
 echo "[!] compiling"
 make ${args} 2>&1
@@ -161,7 +162,7 @@ echo "[+] start packaging"
 
 O=out
 ARCH=arm64
-KERNEL_VERSION="4.19.306-InfiniR-X-NetHunter"
+KERNEL_VERSION="4.19.306-InfiniR-X-NetHunter-APatch"
 DEVICE=ucmi
 ANDROID_VERSION=thirteen
 
