@@ -25,6 +25,8 @@ patch -p1 < kali-nethunter-kernel/patches/4.19/fix-ath9k-naming-conflict.patch
 
 # For Rom Devs
 
+## Warnig: If you don't know what is a custom NetHunter Kernel, use [upstream source](https://github.com/toraidl/InfiniR_kernel_ucmi) instead.
+
 If you want to inline this kernel in your Roms then do this before building ( In kernel root directory ):
 
 ```bash
