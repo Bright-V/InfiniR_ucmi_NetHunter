@@ -87,6 +87,8 @@ CURRENT_PATH=$(pwd)
 
 CLANG_VERSION="17"
 
+CLANG_TAR_NAME="Clang-17.0.0-20230725.tar.gz"
+
 TOOLCHAINS_DIR="$(pwd)/../toolchains"
 
 CLANG_DIR="${TOOLCHAINS_DIR}/zyc-${CLANG_VERSION}"
@@ -96,8 +98,8 @@ if [ ! -d "$CLANG_DIR" ]; then
     echo "[+] start downloading"
     mkdir -p $CLANG_DIR
     wget -P $CLANG_DIR https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230725-release/Clang-17.0.0-20230725.tar.gz
-    tar -xzvf $CLANG_DIR/Clang-17.0.0-20230725.tar.gz -C $CLANG_DIR
-    rm "$CLANG_DIR/Clang-17.0.0-20230725.tar.gz"
+    tar -xzvf $CLANG_DIR/${CLANG_TAR_NAME} -C $CLANG_DIR
+    rm "$CLANG_DIR/$CLANG_TAR_NAME"
     echo "[+] finish"
 else
     echo "[+] clang 17.0.0 already exits"
@@ -150,9 +152,6 @@ make ${args} 2>&1
 
 echo "[!] compiling modules"
 make ${args} INSTALL_MOD_PATH="." INSTALL_MOD_STRIP=1 modules_install
-
-echo "[!] clean dirs"
-rm -rf KernelSU
 
 # ===-----------------------------=== #
 # | Create NetHunter-Anykernel3 Zip | #
