@@ -6,7 +6,7 @@
 # This script is used to build android kernel for mi10 #
 # ===----------------------------------------------=== #
 
-KERNEL_VERSION="2.7"
+KERNEL_VERSION="2.8"
 DEFCONFIG="ucmi_nethunter_apatch_defconfig"
 
 # ===------------=== #
