@@ -1,11 +1,13 @@
-# Kernel Characteristics:
+# Kernel Characteristics
 
 ### Compiler
 
 **Clang**: [ZyCromerZ/Clang 17.0.0](https://github.com/ZyCromerZ/Clang/releases/tag/17.0.0-20230725-release)
 
 ## KenrelSU
+
 Please run the following step before building.
+
 ```bash
 cd /path/to/kernel/source
 curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
@@ -41,7 +43,7 @@ Do this Everytime you clone the repo bcz this kernel has the support for Kernel-
 
 Please install all the dependencies.
 
-``For ArchLinux/Manjaro``
+``For ArchLinux/Manjaro ( ArchLinux based Linux )``
 
 ```bash
 sudo pacman -S clang gcc llvm bc bison base-devel ccache curl flex gcc-multilib git git-lfs gnupg gperf imagemagick lib32-readline lib32-zlib elfutils lz4 sdl openssl libxml2 lzop pngcrush rsync schedtool squashfs-tools libxslt zip zlib lib32-ncurses wxgtk3 ncurses inetutils cpio
@@ -49,7 +51,7 @@ sudo pacman -S clang gcc llvm bc bison base-devel ccache curl flex gcc-multilib 
 
 ``For others``
 ```bash
-# use relevant package manager
+# use relevant package manager ( apt, yum... )
 ```
 
 ## Building Kernel
@@ -61,7 +63,7 @@ cd /path/to/kernel/source
 ./build.sh
 ```
 
-- Template example (``kali-nethunter-project/nethunter-installer/devices/devices.cfg``)
+- Template example ( ``kali-nethunter-project/nethunter-installer/devices/devices.cfg`` )
 
 ```bash
 # Xiaomi 10 for HyperOS Android 14
