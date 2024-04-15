@@ -46,7 +46,7 @@ Please install all the dependencies.
 ``For ArchLinux/Manjaro ( ArchLinux based Linux )``
 
 ```bash
-sudo pacman -S clang gcc llvm bc bison base-devel ccache curl flex gcc-multilib git git-lfs gnupg gperf imagemagick lib32-readline lib32-zlib elfutils lz4 sdl openssl libxml2 lzop pngcrush rsync schedtool squashfs-tools libxslt zip zlib lib32-ncurses wxgtk3 ncurses inetutils cpio
+sudo pacman -S clang gcc llvm bc bison base-devel ccache curl flex gcc-multilib git git-lfs gnupg gperf imagemagick lib32-readline lib32-zlib elfutils lz4 sdl openssl libxml2 lzop pngcrush rsync schedtool squashfs-tools libxslt zip zlib lib32-ncurses wxgtk3 ncurses inetutils cpio z3
 ```
 
 ``For others``
