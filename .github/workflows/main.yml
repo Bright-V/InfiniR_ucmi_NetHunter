@@ -1,0 +1,13 @@
+name: debugger-action 
+ on: 
+   workflow_dispatch:
+   push: 
+     branches: 
+       - master 
+ jobs: 
+   build: 
+     runs-on: ubuntu-latest 
+     steps: 
+     - uses: actions/checkout@v4 
+     - name: Prepare Configuration 
+       run: | ./build.sh
