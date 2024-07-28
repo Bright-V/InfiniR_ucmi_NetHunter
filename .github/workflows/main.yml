@@ -13,5 +13,5 @@ name: Build Kernel
      steps: 
      - uses: actions/checkout@v4 
      - name: Prepare Configuration
-     - run : |
-           ./build.sh
+       run : |
+        ./build.sh
