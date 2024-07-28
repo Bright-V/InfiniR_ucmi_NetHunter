@@ -1,13 +1,17 @@
-name: debugger-action 
+name: Build Kernel 
  on: 
-   workflow_dispatch:
-   push: 
-     branches: 
-       - master 
+   workflow_dispatch: 
+  
  jobs: 
    build: 
+     name: Build Kernel by ${{ github.actor }} 
      runs-on: ubuntu-latest 
+     env: 
+       CCACHE_COMPILERCHECK: "%compiler% -dumpmachine; %compiler% -dumpversion" 
+       CCACHE_NOHASHDIR: "true" 
+       CCACHE_HARDLINK: "true" 
      steps: 
      - uses: actions/checkout@v4 
-     - name: Prepare Configuration 
-       run: | ./build.sh
+     - name: Prepare Configuration
+     - run : |
+           ./build.sh
